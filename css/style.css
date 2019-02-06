@@ -1,0 +1,622 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Lato', 'Arial', sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.7;
+  color: #777;
+  /* padding: 1.6rem; */
+  box-sizing: border-box;
+  background-color: rgba(48, 57, 82);
+}
+
+.header {
+  position: relative;
+  height: 95vh;
+  background-image: linear-gradient(to right top , rgba(89, 98, 117, 0.8) , rgba(48, 57, 82, 0.8)) ,url(../img/controller-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  clip-path: polygon( 0 0, 100% 0, 100% 95%, 50% 100%, 0 95%);
+}
+
+.logo-box {
+  position: absolute;
+  top: 2rem;
+  left: 2rem
+}
+
+.logo {
+  height: 4rem;
+}
+
+.text-box {
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%)
+}
+
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+}
+
+.heading-primary-main {
+  text-transform: initial;
+  display: block;
+  font-size: 6rem;
+  font-weight: 500;
+  letter-spacing: 1.1rem;
+  animation-name: moveInLeft;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+  font-family:'Changa One', 'Black Ops One', 'Racing Sans One', cursive;
+  /* animation-delay: 3s; */
+}
+
+.heading-primary-sub {
+  display: block;
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: 1.23rem;
+  animation: moveInRight 1.5s ease-out;
+  font-family:'Changa One', 'Black Ops One', 'Racing Sans One', cursive;
+  /* margin-bottom: 6rem; */
+}
+
+.heading-primary-price {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: 400;
+  letter-spacing: 0.5rem;
+  animation-name: moveInLeft;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+  font-family:'Changa One', 'Black Ops One', 'Racing Sans One', cursive;
+  margin-top: 2rem;
+  margin-bottom: 6rem;
+  color: #fff;
+}
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+
+  80% {
+    transform: translateX(1rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0)
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem);
+  }
+
+  80% {
+    transform: translateX(-1rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0)
+  }
+}
+
+@keyframes moveInButton {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0)
+  }
+}
+
+.btn:link,
+.btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1.6rem 4rem;
+  display: inline-block;
+  border-radius: 100px;
+  transition: all .2s;
+  position: relative;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, .2)
+}
+
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, .2)
+}
+
+.btn-white {
+  background-color: #fff;
+  color: #777;
+}
+
+.btn-animated {
+  animation: moveInButton 1.5s ease-out .75s;
+  animation-fill-mode: backwards;
+}
+
+.btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 10rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all .4s;
+}
+
+.btn-white::after{
+  background-color: #fff;
+}
+
+.btn:hover::after {
+  transform: scaleX(1.5) scaleY(1.6);
+  opacity: 0;
+}
+/* Price heading */
+.price-heading {
+  text-align: center;
+  text-transform: uppercase;
+  padding-top: 5rem;
+  font-size: 4rem;
+  color: #fff;
+  letter-spacing: 8px;
+  font-family:'Changa One', 'Black Ops One', 'Racing Sans One', cursive;
+}
+/* Price box */
+
+.price-box-section {
+  padding-top: 1rem;
+  padding-bottom: 5rem;
+  /* background: url('../img/god-of-war.jpg') center; */
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+}
+
+.price-box-container {
+  background-color:#48dbfb;
+  margin: 3rem;
+  /* padding: 1rem; */
+  /* background: #fff; */
+  /* opacity: 0.5; */
+  /* border-radius: 1rem; */
+  /* border: 1px solid transparent; */
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  text-align: center;
+  font-family:'Changa One', 'Black Ops One', 'Racing Sans One', cursive;
+}
+
+.price-box-1 {
+  clip-path: polygon( 0 0, 100% 10%, 100% 100%, 0 90%, 0 0);
+}
+
+.price-box-2 {
+  clip-path: polygon( 0 10%, 100% 0, 100% 90%, 0 100%, 0 0);
+}
+
+.price-box-heading {
+  /* background: #fff; */
+  padding-bottom: 2rem;
+  padding-top: 6rem;
+  font-size: 4rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 1rem;
+  border-bottom: 2rem solid rgb(48, 57, 82);
+}
+
+.price-box-body {
+  /* background: #fff; */
+  margin-bottom: 1rem;
+  color: #fff;
+  font-size: 3rem;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.price-box-body > div:last-child {
+  border-bottom: 2rem solid rgb(48, 57, 82);
+  padding-bottom: 1rem;
+}
+
+.price-box-footer {
+  font-size: 3rem;
+  padding-bottom: 4rem;
+}
+
+/* contact heading */
+
+.contact-section {
+  background: linear-gradient(
+    rgba(48, 57, 82, 0.45), rgba(39, 39, 39, 0.45) 
+  ),url('../img/god-of-war.jpg') top;
+  clip-path: polygon(50% 10%, 100% 0, 100% 100%, 50% 100%, 0 100%, 0 0);
+  /* background-color: #48637c; */
+  padding: 3rem 0 3rem 0;
+}
+
+.contact-heading {
+  padding-top: 7rem;
+  padding-bottom: 4rem;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 4rem;
+  color: #fff;
+  letter-spacing: 8px;
+  font-family:'Changa One', 'Black Ops One', 'Racing Sans One', cursive;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input, textarea {
+  width: 50%;
+  margin-bottom: 5rem;
+  border: 1px solid #47dbfb;
+  background: rgba(48, 57, 82, 0.41);
+  border-radius: 2rem;
+  color: #47dbfb;
+  font-size: 1.8rem;
+  padding-left: 2.5rem;
+}
+
+input {
+  height: 4rem;
+}
+
+textarea {
+  resize: none;
+  font-size: 2.5rem;
+  padding-top: 2rem;
+}
+
+.contact-button {
+  border: 1px solid #47dbfb;
+  background: rgba(48, 57, 82, 0.41);
+  height: 4rem;
+  width: 20rem;
+  border-radius: 2rem;
+  color: #47dbfb;
+  font-size: 1.8rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  cursor: pointer;
+  margin-bottom: 2rem;
+}
+
+.contact-button:hover {
+  background: #47dbfb;
+  color: #fff;
+  transition: all 0.5s ease-out;
+  border-color: transparent;
+}
+
+/* footer */
+footer {
+  height: 5rem;
+  background-color: #303952;
+}
+
+.footer-container {
+  width: 50%;
+  margin: 0 auto;
+}
+.copyright {
+  line-height: 5rem;
+  display: inline-block;
+}
+.social-icons {
+  float: right;
+}
+.social-icons img {
+  margin-top: 1rem;
+  margin-right: 2rem;
+  height: 3rem;
+  display: inline-block;
+}
+
+/* media queries */
+
+@media (max-width: 1200px) {
+
+  .text-box {
+    top: 45%;
+  }
+
+  .heading-primary-main {
+    font-size: 4.3rem;
+    letter-spacing: 0.8rem;
+    /* animation-delay: 3s; */
+  }
+  
+  .heading-primary-sub {
+    font-size: 2rem;
+    letter-spacing: 1rem;
+  }
+  
+  .heading-primary-price {
+    font-size: 2.2rem;
+    font-weight: 400;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+    color: #fff;
+  }
+
+  .btn:link {
+    padding: 1rem 3rem;
+  }
+
+  /* Price heading */
+  .price-heading {
+    padding-top: 5rem;
+    font-size: 3.5rem;
+    letter-spacing: 8px;
+  }
+  /* Price box */
+
+  .price-box-section {
+    padding-top: 1rem;
+    padding-bottom: 3rem;
+  
+  }
+
+  .price-box-container {
+    margin: 2rem;
+    width: 30%;
+  }
+
+  .price-box-heading {
+    /* background: #fff; */
+    padding-bottom: 2rem;
+    padding-top: 4rem;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    border-bottom: 2rem solid rgb(48, 57, 82);
+  }
+
+  .price-box-body {
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+  }
+
+  .price-box-body > div:last-child {
+    border-bottom: 2rem solid rgb(48, 57, 82);
+    padding-bottom: 1rem;
+  }
+
+  .price-box-footer {
+    font-size: 3rem;
+    padding-bottom: 4rem;
+  }
+
+  /* contact heading */
+
+  .contact-section {
+    clip-path: polygon(50% 10%, 100% 0, 100% 100%, 50% 100%, 0 100%, 0 0);
+    /* background-color: #48637c; */
+    padding: 3rem 0 3rem 0;
+  }
+
+  .contact-heading {
+    padding-top: 6rem;
+    padding-bottom: 3rem;
+    font-size: 3rem;
+    letter-spacing: 6px;
+  }
+
+  input, textarea {
+    width: 50%;
+    margin-bottom: 4rem;
+    border-radius: 2rem;
+    font-size: 1.8rem;
+    padding-left: 2.5rem;
+  }
+
+  input {
+    height: 4rem;
+  }
+
+  textarea {
+    resize: none;
+    font-size: 2.5rem;
+    padding-top: 2rem;
+  }
+
+  .contact-button {
+    border: 1px solid #47dbfb;
+    background: rgba(48, 57, 82, 0.41);
+    height: 4rem;
+    width: 20rem;
+    border-radius: 2rem;
+    color: #47dbfb;
+    font-size: 1.8rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    cursor: pointer;
+    margin-bottom: 2rem;
+  }
+
+  .contact-button:hover {
+    background: #47dbfb;
+    color: #fff;
+    transition: all 0.5s ease-out;
+    border-color: transparent;
+  }
+
+}
+
+@media (max-width: 768px) { 
+
+  .text-box {
+    top: 25%;
+    position: relative;
+    margin: 0 1rem;
+    transform: none;
+    left: auto;
+  }
+
+  .heading-primary-main {
+    font-size: 3.3rem;
+    letter-spacing: 0.5rem;
+    /* animation-delay: 3s; */
+  }
+  
+  .heading-primary-sub {
+    font-size: 1.8rem;
+    letter-spacing: 0.5rem;
+  }
+  
+  .heading-primary-price {
+    font-size: 2.2rem;  
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+    color: #fff;
+  }
+
+  .btn:link {
+    padding: 0.9rem 2.5rem;
+    font-size: 1.4rem;
+  }
+
+  /* Price heading */
+  .price-heading {
+    padding-top: 5rem;
+    font-size: 2.4rem;
+    letter-spacing: 5px;
+  }
+  /* Price box */
+
+  .price-box-section {
+    padding-top: 1rem;
+    padding-bottom: 3rem;
+    flex-direction: column;
+  }
+
+  .price-box-container {
+    margin: 2rem auto;
+    width: 90%;
+  }
+
+  .price-box-heading {
+    /* background: #fff; */
+    padding-bottom: 1.5rem;
+    padding-top: 3rem;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    border-bottom: 2rem solid rgb(48, 57, 82);
+  }
+
+  .price-box-body {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+  }
+
+  .price-box-body > div:last-child {
+    border-bottom: 2rem solid rgb(48, 57, 82);
+    padding-bottom: 1rem;
+  }
+
+  .price-box-footer {
+    font-size: 3rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .price-box-1, .price-box-2 {
+    clip-path: polygon(50% 5%, 100% 0, 100% 95%, 50% 100%, 0 95%, 0 0);
+  }
+
+  /* contact heading */
+
+  .contact-section {
+    clip-path: polygon(50% 5%, 100% 0, 100% 100%, 50% 100%, 0 100%, 0 0);
+    /* background-color: #48637c; */
+    padding: 3rem 0 3rem 0;
+  }
+
+  .contact-heading {
+    padding-top: 4rem;
+    padding-bottom: 3rem;
+    font-size: 2.4rem;
+    letter-spacing: 6px;
+  }
+
+  input, textarea {
+    width: 90%;
+    margin-bottom: 2.5rem;
+    border-radius: 2rem;
+    font-size: 1.8rem;
+    padding-left: 2.5rem;
+  }
+
+  input {
+    height: 4rem;
+  }
+
+  textarea {
+    resize: none;
+    font-size: 2.5rem;
+    padding-top: 2rem;
+  }
+
+  .contact-button {
+    border: 1px solid #47dbfb;
+    background: rgba(48, 57, 82, 0.41);
+    height: 4rem;
+    width: 20rem;
+    border-radius: 2rem;
+    color: #47dbfb;
+    font-size: 1.8rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    cursor: pointer;
+    margin-bottom: 2rem;
+  }
+
+  .contact-button:hover {
+    background: #47dbfb;
+    color: #fff;
+    transition: all 0.5s ease-out;
+    border-color: transparent;
+  }
+  .footer-container {
+    width: 90%;
+  }
+}
