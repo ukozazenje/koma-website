@@ -6,6 +6,7 @@
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -21,7 +22,8 @@ body {
 .header {
   position: relative;
   height: 95vh;
-  background-image: linear-gradient(to right top , rgba(89, 98, 117, 0.8) , rgba(48, 57, 82, 0.8)) ,url(../img/controller-bg.jpg);
+  /* background-image: linear-gradient(to right top , rgba(89, 98, 117, 0.8) , rgba(48, 57, 82, 0.8)) ,url(../img/controller-bg.jpg); */
+  background-image: linear-gradient(to right top , rgba(18, 156, 163, 0.8) , rgba(48, 57, 82, 0.8)) ,url(../img/controller-bg.jpg);
   background-size: cover;
   background-position: center;
   clip-path: polygon( 0 0, 100% 0, 100% 95%, 50% 100%, 0 95%);
@@ -205,7 +207,7 @@ body {
 }
 
 .price-box-container {
-  background-color:#48dbfb;
+  background-color:#119DA4;
   margin: 3rem;
   /* padding: 1rem; */
   /* background: #fff; */
@@ -218,6 +220,7 @@ body {
   color: #fff;
   text-align: center;
   font-family:'Changa One', 'Black Ops One', 'Racing Sans One', cursive;
+  /* transform: translateY(150px) */
 }
 
 .price-box-1 {
@@ -290,10 +293,10 @@ body {
 input, textarea {
   width: 50%;
   margin-bottom: 5rem;
-  border: 1px solid #47dbfb;
+  border: 1px solid #119DA4;
   background: rgba(48, 57, 82, 0.41);
   border-radius: 2rem;
-  color: #47dbfb;
+  color: #119DA4;
   font-size: 1.8rem;
   padding-left: 2.5rem;
 }
@@ -309,12 +312,12 @@ textarea {
 }
 
 .contact-button {
-  border: 1px solid #47dbfb;
+  border: 1px solid #119DA4;
   background: rgba(48, 57, 82, 0.41);
   height: 4rem;
   width: 20rem;
   border-radius: 2rem;
-  color: #47dbfb;
+  color: #119DA4;
   font-size: 1.8rem;
   font-weight: 600;
   letter-spacing: 2px;
@@ -323,7 +326,7 @@ textarea {
 }
 
 .contact-button:hover {
-  background: #47dbfb;
+  background: #119DA4;
   color: #fff;
   transition: all 0.5s ease-out;
   border-color: transparent;
@@ -461,12 +464,12 @@ footer {
   }
 
   .contact-button {
-    border: 1px solid #47dbfb;
+    border: 1px solid #119DA4;
     background: rgba(48, 57, 82, 0.41);
     height: 4rem;
     width: 20rem;
     border-radius: 2rem;
-    color: #47dbfb;
+    color: #119DA4;
     font-size: 1.8rem;
     font-weight: 600;
     letter-spacing: 2px;
@@ -475,7 +478,7 @@ footer {
   }
 
   .contact-button:hover {
-    background: #47dbfb;
+    background: #119DA4;
     color: #fff;
     transition: all 0.5s ease-out;
     border-color: transparent;
@@ -597,12 +600,12 @@ footer {
   }
 
   .contact-button {
-    border: 1px solid #47dbfb;
+    border: 1px solid #119DA4;
     background: rgba(48, 57, 82, 0.41);
     height: 4rem;
     width: 20rem;
     border-radius: 2rem;
-    color: #47dbfb;
+    color: #119DA4;
     font-size: 1.8rem;
     font-weight: 600;
     letter-spacing: 2px;
@@ -611,7 +614,7 @@ footer {
   }
 
   .contact-button:hover {
-    background: #47dbfb;
+    background: #119DA4;
     color: #fff;
     transition: all 0.5s ease-out;
     border-color: transparent;
